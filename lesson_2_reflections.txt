@@ -23,3 +23,15 @@ How do diagrams help you visualize the branch structure?
 	Diagrams help me to know which commits are reachable in a project and how to return to them. Diagrams also make it easier 
 	to trace the history of a project. Because of knowing the reachable commits it makes one more conscious of commits you dont 
 	want to make to a branch yet and whether to write down the commit ID so as to return to them later if necessary.
+	
+what is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+	The commits in a branch merged into the 'master' branch for example, will be added to the 'master' branch and will be included 
+	in the 'master' branch's commit history. The merge of two branches is itself a new commit that will have both merged branches as its
+	parent(i.e we can reach the commits in the two branches). A merge will include changes made to the project files by the two
+	branches since the time the branches diverged.
+	
+What are the pros and cons of Git's automatically merging vs. always doing merges manually?
+	merging automatically may have the advantage of the user not having to worry about resolving conflicts on his own. But if multiple
+	authors work on the same file and make changes in the same general area especially in a code, Git will find it difficult to know which
+	changes to keep and which ones to remove. Hence leaving the conflict to be resolved manually by an author allows him to have control
+	over what changes he wants in his files.
